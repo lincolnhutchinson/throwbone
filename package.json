@@ -16,7 +16,7 @@
     "url": "https://github.com/lincolnhutchinson/throwbone/issues"
   },
   "homepage": "https://github.com/lincolnhutchinson/throwbone#readme",
-  "dependencies": {
+  "devDependencies": {
     "jasmine": "^4.5.0"
   }
 }
