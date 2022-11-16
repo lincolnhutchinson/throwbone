@@ -1,5 +1,5 @@
 console.log("Let's throw some bones!");
 
-export function testFunc() {
+export function rollDice(diceExpression: string) {
 	return 3;
 }
