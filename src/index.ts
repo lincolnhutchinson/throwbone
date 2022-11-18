@@ -1,4 +1,5 @@
-console.log("Let's throw some bones!");
+import random from 'random';
+import seedrandom from 'seedrandom';
 
 export function rollDice(diceExpression: string) {
 	let result = parseInt(diceExpression);

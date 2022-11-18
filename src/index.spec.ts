@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import { rollDice } from './index';
+import { rollDice } from './index.js';
 
 describe('throwbone', function() {
 	describe('rollDice', function() {
