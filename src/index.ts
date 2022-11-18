@@ -11,6 +11,16 @@ export function evaluateRoll(rollExpression: string) {
 	}
 }
 
+export function rollDice(quantity: number, sides: number) {
+	let result = 0;
+
+	for (let i = 0; i < quantity; i++) {
+		result += random.int(1, sides);
+	}
+
+	return result;
+}
+
 function InvalidSymbolError(symbol: string) {
 	return {
 		"name": "Invalid Symbol Error",
