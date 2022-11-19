@@ -2,7 +2,11 @@
 	"name": "throwbone",
 	"version": "0.2.0",
 	"description": "",
-	"exports": "./lib/index.js",
+	"exports": {
+		"import": "./lib/index.js",
+		"types": "./lib/index.d.ts",
+		"default": "./lib/index.js"
+	},
 	"types": "./lib/index.d.ts",
 	"type": "module",
 	"engines": {
