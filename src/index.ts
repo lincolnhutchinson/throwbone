@@ -21,6 +21,10 @@ export function rollDice(quantity: number, sides: number) {
 	return result;
 }
 
+export function setThrowBoneSeed(seed: string) {
+	random.use(seedrandom(seed));
+}
+
 class InvalidSymbolError extends Error {
 	constructor(symbol: string) {
 		super(`Invalid Symbol: ${symbol}`);
