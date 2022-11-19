@@ -2,7 +2,18 @@ import random from 'random';
 import seedrandom from 'seedrandom';
 
 export function evaluateRoll(rollExpression: string) {
-	let result = parseInt(rollExpression);
+	const DICE_RE = /(\d+)d(\d+)/;
+	let result = -1; 
+
+	const dice_match = rollExpression.match(DICE_RE);
+	if (dice_match != null) {
+		const quantity = parseInt(dice_match[1]);
+		const sides = parseInt(dice_match[2]);
+
+		result = rollDice(quantity, sides);
+	} else {
+		result = parseInt(rollExpression);
+	}
 
 	if (Number.isInteger(result)) {
 		return result;
