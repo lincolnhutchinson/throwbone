@@ -7,7 +7,7 @@ export function evaluateRoll(rollExpression: string) {
 	if (Number.isInteger(result)) {
 		return result;
 	} else {
-		throw InvalidSymbolError(rollExpression);
+		throw new InvalidSymbolError(rollExpression);
 	}
 }
 
@@ -21,10 +21,10 @@ export function rollDice(quantity: number, sides: number) {
 	return result;
 }
 
-function InvalidSymbolError(symbol: string) {
-	return {
-		"name": "Invalid Symbol Error",
-		"message": `Invalid Symbol: ${symbol}`
+class InvalidSymbolError extends Error {
+	constructor(symbol: string) {
+		super(`Invalid Symbol: ${symbol}`);
+		this.name = "Invalid Symbol Error";
 	}
 }
 
